@@ -5,6 +5,8 @@ body {
 img{
   width: 75px;
   height: 75px;
+  margin-left: 12px;
+  filter: invert();
 }
 
 .chess-board {
