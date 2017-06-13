@@ -1,0 +1,39 @@
+body {
+  background: #312E2B;
+}
+
+img{
+  width: 75px;
+  height: 75px;
+}
+
+.chess-board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: lightgrey;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.chess-square {
+  flex-basis: 11.1111%;
+  height: 6.25vw;
+}
+
+.white {
+  background-color: #EEEED2;
+}
+
+.black{
+  background-color: #769656;
+}
+
+.chess-label{
+  background-color: slategrey;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
