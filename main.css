@@ -6,7 +6,6 @@ img{
   width: 75px;
   height: 75px;
   margin-left: 12px;
-  filter: invert();
 }
 
 .chess-board {
@@ -15,13 +14,14 @@ img{
   flex-wrap: wrap;
   background-color: lightgrey;
   width: 60%;
+  height: 55vw;
   margin-left: auto;
   margin-right: auto;
 
 }
 
 .chess-square {
-  flex-basis: 11.1111%;
+  flex-basis: 11.875%;
   height: 6.25vw;
 }
 
@@ -33,9 +33,33 @@ img{
   background-color: #769656;
 }
 
-.chess-label{
+.chess-label-h{
   background-color: slategrey;
   color: white;
   text-align: center;
   font-size: 2em;
+  height: 10vw;
+}
+.chess-label-h:nth-child(1) {
+
+}
+
+.chess-label-v, .space-holder {
+  flex-basis: 5%;
+  text-align: center;
+  background-color: slategrey;
+  color: white;
+  font-size: 2em;
+
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+
+.movement-buttons {
+  text-align-last: center;
+  height: 50px;
+  width: 100px;
 }

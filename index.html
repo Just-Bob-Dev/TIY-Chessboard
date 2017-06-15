@@ -10,7 +10,7 @@
 
 
     <section class="chess-board">
-      <div class="chess-label chess-square">8</div>
+      <div class="chess-label-v chess-square">8</div>
       <div class="chess-square white chessBoardArea" id="a8"></div>
       <div class="chess-square black chessBoardArea" id="b8"></div>
       <div class="chess-square white chessBoardArea" id="c8"></div>
@@ -20,7 +20,7 @@
       <div class="chess-square white chessBoardArea" id="g8"></div>
       <div class="chess-square black chessBoardArea" id="h8"></div>
 
-      <div class="chess-label chess-square">7</div>
+      <div class="chess-label-v chess-square">7</div>
       <div class="chess-square black chessBoardArea" id="a7"></div>
       <div class="chess-square white chessBoardArea" id="b7"></div>
       <div class="chess-square black chessBoardArea" id="c7"></div>
@@ -30,7 +30,7 @@
       <div class="chess-square black chessBoardArea" id="g7"></div>
       <div class="chess-square white chessBoardArea" id="h7"></div>
 
-      <div class="chess-label chess-square">6</div>
+      <div class="chess-label-v chess-square">6</div>
       <div class="chess-square white chessBoardArea" id="a6"></div>
       <div class="chess-square black chessBoardArea" id="b6"></div>
       <div class="chess-square white chessBoardArea" id="c6"></div>
@@ -40,7 +40,7 @@
       <div class="chess-square white chessBoardArea" id="g6"></div>
       <div class="chess-square black chessBoardArea" id="h6"></div>
 
-      <div class="chess-label chess-square">5</div>
+      <div class="chess-label-v chess-square">5</div>
       <div class="chess-square black chessBoardArea" id="a5"></div>
       <div class="chess-square white chessBoardArea" id="b5"></div>
       <div class="chess-square black chessBoardArea" id="c5"></div>
@@ -50,17 +50,17 @@
       <div class="chess-square black chessBoardArea" id="g5"></div>
       <div class="chess-square white chessBoardArea" id="h5"></div>
 
-      <div class="chess-label chess-square">4</div>
-      <div class="chess-square white chessBoardArea" if="a4"></div>
-      <div class="chess-square black chessBoardArea" if="b4"></div>
-      <div class="chess-square white chessBoardArea" if="c4"></div>
-      <div class="chess-square black chessBoardArea" if="d4"></div>
-      <div class="chess-square white chessBoardArea" if="e4"></div>
-      <div class="chess-square black chessBoardArea" if="f4"></div>
-      <div class="chess-square white chessBoardArea" if="g4"></div>
-      <div class="chess-square black chessBoardArea" if="h4"></div>
+      <div class="chess-label-v chess-square">4</div>
+      <div class="chess-square white chessBoardArea" id="a4"></div>
+      <div class="chess-square black chessBoardArea" id="b4"></div>
+      <div class="chess-square white chessBoardArea" id="c4"></div>
+      <div class="chess-square black chessBoardArea" id="d4"></div>
+      <div class="chess-square white chessBoardArea" id="e4"></div>
+      <div class="chess-square black chessBoardArea" id="f4"></div>
+      <div class="chess-square white chessBoardArea" id="g4"></div>
+      <div class="chess-square black chessBoardArea" id="h4"></div>
 
-      <div class="chess-label chess-square">3</div>
+      <div class="chess-label-v chess-square">3</div>
       <div class="chess-square black chessBoardArea"id="a3"></div>
       <div class="chess-square white chessBoardArea"id="b3"></div>
       <div class="chess-square black chessBoardArea"id="c3"></div>
@@ -70,7 +70,7 @@
       <div class="chess-square black chessBoardArea"id="g3"></div>
       <div class="chess-square white chessBoardArea"id="h3"></div>
 
-      <div class="chess-label chess-square">2</div>
+      <div class="chess-label-v chess-square">2</div>
       <div class="chess-square white chessBoardArea"id="a2"></div>
       <div class="chess-square black chessBoardArea"id="b2"></div>
       <div class="chess-square white chessBoardArea"id="c2"></div>
@@ -80,7 +80,7 @@
       <div class="chess-square white chessBoardArea"id="g2"></div>
       <div class="chess-square black chessBoardArea"id="h2"></div>
 
-      <div class="chess-label chess-square">1</div>
+      <div class="chess-label-v chess-square">1</div>
       <div class="chess-square black chessBoardArea" id="a1"></div>
       <div class="chess-square white chessBoardArea" id="b1"></div>
       <div class="chess-square black chessBoardArea" id="c1"></div>
@@ -90,19 +90,22 @@
       <div class="chess-square black chessBoardArea" id="g1"></div>
       <div class="chess-square white chessBoardArea" id="h1"></div>
 
-      <div class="chess-label chess-square"></div>
-      <div class="chess-label chess-square">a</div>
-      <div class="chess-label chess-square">b</div>
-      <div class="chess-label chess-square">c</div>
-      <div class="chess-label chess-square">d</div>
-      <div class="chess-label chess-square">e</div>
-      <div class="chess-label chess-square">f</div>
-      <div class="chess-label chess-square">g</div>
-      <div class="chess-label chess-square">h</div>
+      <div class="chess-label-h chess-square space-holder"></div>
+      <div class="chess-label-h chess-square">a</div>
+      <div class="chess-label-h chess-square">b</div>
+      <div class="chess-label-h chess-square">c</div>
+      <div class="chess-label-h chess-square">d</div>
+      <div class="chess-label-h chess-square">e</div>
+      <div class="chess-label-h chess-square">f</div>
+      <div class="chess-label-h chess-square">g</div>
+      <div class="chess-label-h chess-square">h</div>
     </section>
 
     <div class="button-area">
-      <button class=""
+      <button class='movement-buttons' id="step-back"><</button>
+      <button class='movement-buttons' id="play/pause">Play||Pause</button>
+      <button class='movement-buttons' id="step-forward">></button>
+
     </div>
 
     <script src="main.js"></script>

@@ -1,7 +1,8 @@
 
 function makeImage(placeHolder, src){
+  let temp = placeHolder;
   placeHolder = document.createElement('img');
-  placeHolder.id =  "" + placeHolder + "";
+  placeHolder.id =  temp;
   placeHolder.src = src;
   return placeHolder;
 }
@@ -20,7 +21,7 @@ for (var i = 0; i < numberArray.length; i++)
         chessBoardArray[i][n] = total;
     }
 }
-console.log(chessBoardArray);
+// console.log(chessBoardArray);
 
 var playableArray = [[],[],[],[],[],[],[],[]];
 var tempArray = [[],[],[],[],[],[],[],[]];
@@ -34,7 +35,7 @@ for (var i = 0; i < chessBoard.length; i++)
   if(chessAreaId === "a2" || chessAreaId === "b2" || chessAreaId === "c2" || chessAreaId === "d2" || chessAreaId === "e2" || chessAreaId === "f2" || chessAreaId === "g2" || chessAreaId === "h2")
   {
     chessBoard[i].value = "p";
-    let val = "p"+ chessAreaId;
+    let val = "p" + chessAreaId;
     let x = makeImage(val, "images/Pawn.png");
     let parentNode = document.getElementById(chessAreaId);
     parentNode.appendChild(x);
@@ -43,7 +44,7 @@ for (var i = 0; i < chessBoard.length; i++)
   else if(chessAreaId === "a7" || chessAreaId === "b7" || chessAreaId === "c7" || chessAreaId === "d7" || chessAreaId === "e7" || chessAreaId === "f7" || chessAreaId === "g7" || chessAreaId === "h7")
   {
     chessBoard[i].value = "p";
-    let val = "p"+ chessAreaId;
+    let val = 'p' + chessAreaId;
     let x = makeImage(val, "images/Pawn.png");
     let parentNode = document.getElementById(chessAreaId);
     parentNode.appendChild(x);
@@ -102,6 +103,39 @@ for (var i = 0; i < chessBoard.length; i++)
       }
     }
   }
+}
+
+var movementArray = [['d2', 'd4', 'p'], ['g8', 'f6', 'k'], ['c2', 'c4', 'p'], ['f7', 'f6', 'p'], ['g2', 'g3','p'], ['d7', 'd5', 'p'], ['f1', 'g2', 'B'], ['f8', 'e7', 'B'], ['kg1', 'f3', 'k']];
+function moveEvent(startSpot, endingSpot, piece)
+{
+  let getId = document.getElementById(piece + startSpot);
+  let getOldPlacement = document.getElementById(startSpot);
+  let getNewPlacement = document.getElementById(endingSpot);
+
+  getOldPlacement.removeChild(getId);
+  let childNode = getId;
+
+
+  getNewPlacement.appendChild(childNode);
+
+
 
 }
-console.log(chessBoardArray);
+
+for (var i = 0; i < movementArray.length; i++)
+{
+  let currentMove = movementArray[i][0];
+  for (var x = 0; x < chessBoardArray.length; x++)
+  {
+    for (var n = 0; n < chessBoardArray.length; n++)
+    {
+
+      if (chessBoardArray[x][n].id === currentMove)
+      {
+        console.log("You are currently moving: " + chessBoardArray[x][n].id + " to " + movementArray[i][1]);
+        moveEvent(movementArray[i][0],movementArray[i][1], movementArray[2]);
+      }
+    }
+  }
+}
+console.log(chessBoardArray)
